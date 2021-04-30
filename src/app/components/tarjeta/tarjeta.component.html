@@ -1,0 +1,16 @@
+
+<div class="card animated fadeIn fast" > <!--let i = index es para señalar el id por defecto en los heroes. lo llamaremos en el botton ver mas.-->
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{heroe.bio}}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+      <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block"> <!--La funcion verHeroe no existe así que tenemos que crearla en heroes.component.ts-->
+        Ver más
+    </button>
+
+   <!-- <a [routerLink] = "['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más link...</a>
+   -->
+    </div>
+  </div>
